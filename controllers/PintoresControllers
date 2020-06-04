@@ -1,0 +1,20 @@
+let mongoose= require('mongoose');
+let Pintores= require('../models/pintores');
+let PintoresController={};
+/*LISTOR-> FIND()*/
+PintoresController.list=(req, res)=>{
+    Pintores.find({})
+    .limit(20)
+    .skip(num=0)
+    .exec(ceir.pintor)=>{
+        if(err){
+            console.log('Error:', err)
+        }
+    res.render(view: '.../views/index', Option:{
+        pintores: pintor,
+        titulo:"listado de pintores",
+        year: new Date().getDate()
+    })    
+    })
+};
+module.exports=PintoresController;
